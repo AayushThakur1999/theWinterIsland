@@ -1,145 +1,106 @@
-@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Qwigley&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500&display=swap');
 
 body {
     font-family: 'Niconne', cursive;
-    background-image: url("https://wallpapers.com/images/high/british-shorthair-winter-landscape-rbquf0jfuosrcszg.webp");
+    background-image: url("/imgs/british-shorthair-cat.jpg");
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    color: white;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: beige;
 }
 
-#icon {
-    display: inline-block;
-    position: absolute;
-    left: 20px;
-    top: 20px;
+#header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#header > figure {
     text-align: center;
-    font-size: 22px;
+    margin: 0;
+    color: beige;
 }
 
-#icon img {
-    width: 40px;
-    height: 45px;
+#header > figure > img {
+    width: 1.5rem;
+    height: 2rem;
     filter: invert(100%);
 }
-
-#menu {
-    width: 657px;
-    margin: 34px auto;
+#header ul {
+    margin: 0;
+    padding-top: 1.5rem;
+}
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
 }
 
-.navbar {
-    margin: 0px;
-    padding: 0px;
-}
-
-.navbar li {
+#navbar > li {
     list-style-type: none;
-    display: inline-block;
-    font-size: 32px;
 }
 
-.navbar li a {
+#navbar a {
     text-decoration: none;
-    color: white;
-    padding: 0 27px;
+    color:beige;
+    font-size: 1.8rem;
+    padding: 0 0.5rem;
 }
 
-.navbar li a:hover {
-    color: #ff0b0b;
-    cursor: pointer;
-}
-
-.search {
-    display: inline-block;
-    position: absolute;
-    right: 20px;
-    top: 39px;
-}
-
-header .search input {
-    margin-top:2px;
+#search {
+    padding-top: 1.5rem;
 }
 
 #searchBar {
-    width: 210px;
-    height: 32px;
-    font-size: 20px;
-    font-family: 'Niconne', cursive;
-    border: 2px solid darkolivegreen;
-    border-radius: 8px;
-    padding-left: 10px;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(167, 201, 112);
+    font-size: 1.2rem;
+    font-family: inherit;
 }
 
 .btn {
-    position: relative;
-    margin-left: 5px;
-    border-radius: 10px;
-    padding: 6px 10px;
-    cursor: pointer;
-    color: #424242;
-    font-family: 'Niconne', cursive;
-    font-size: 18px;
+    font-size: 1rem;
+    padding: 3px 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(167, 201, 112);
+    font-family: inherit;
+    color: gray;
 }
+/* HEADER STYLING ENDS */
 
-.btn:active {
-    color: #ef7a15;
-}
+/* CONTAINER STYLING STARTS */
 
 .container {
-    width: 500px;
-    margin: 112px auto;
-    padding: 15px;
-    border: 4px solid darkcyan;
-    border-radius: 15px;
-}
-
-.container h1 {
-    font-size: 40px;
     text-align: center;
+    border: 3px solid rgb(45, 0, 128);
+    border-radius: 1rem;
+    margin: 4rem;
+    padding-bottom: 1rem;
 }
 
 .container form {
+    width: 20rem;
     margin: auto;
 }
-
-.form-group {
-    text-align: center;
-}
-
-.form-group input {
-    font-family: 'Qwigley', cursive;
-    width: 300px;
-    font-size: 30px;
-    border: 2px solid gray;
-    margin: 5px auto;
-    padding-left: 8px;
-    border-radius: 8px;
-}
-
-.container button {
-    font-family: 'Qwigley', cursive;
-    width: 305px;
+.form-group input{
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    width: 100%;
     display: block;
-    text-align: center;
-    font-size: 22px;
-    border: 2px solid gainsboro;
-    border-radius: 8px;
-    margin: 15px auto 0 auto;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(235, 180, 141);
 }
 
-.submit:hover {
-    background-color: rgb(144, 210, 225);
-}
-
+/* CONTAINER STYLING ENDS */
+ 
 footer {
-    color:#BA68C8;
     text-align: center;
-    margin-bottom: 50px;
 }
 
 footer a {
     text-decoration: none;
-    color:#00838F;
+    color: #43A047;
 }
