@@ -19,7 +19,7 @@ body::before {
     height: 100%;
     opacity: 0.6;
     z-index: -2;
-    background-image: url("/imgs/british-shorthair-cat.jpg");
+    background-image: url("../imgs/british-shorthair-cat.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
