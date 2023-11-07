@@ -1,13 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500&display=swap');
 
 body {
+    margin: 0;
+    padding: 0;
+    position: relative;
     font-family: 'Niconne', cursive;
+    background-color: #000;
+    color: #DCE775;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    opacity: 0.6;
+    z-index: -2;
     background-image: url("/imgs/british-shorthair-cat.jpg");
     background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
+    background-position: center center;
     background-size: cover;
-    color: beige;
 }
 
 #header {
@@ -15,23 +30,21 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    padding: 3rem 0;
 }
 
 #header > figure {
     text-align: center;
     margin: 0;
-    color: beige;
+    font-weight: 600;
 }
 
 #header > figure > img {
-    width: 1.5rem;
-    height: 2rem;
+    width: 2.1rem;
+    height: 2.5rem;
     filter: invert(100%);
 }
-#header ul {
-    margin: 0;
-    padding-top: 1.5rem;
-}
+
 #navbar {
     display: flex;
     justify-content: space-between;
@@ -44,13 +57,24 @@ body {
 
 #navbar a {
     text-decoration: none;
-    color:beige;
+    color:#DCE775;
     font-size: 1.8rem;
     padding: 0 0.5rem;
+    font-weight: 600;
+}
+
+#navbar a:hover{
+    color:#81D4FA;
 }
 
 #search {
-    padding-top: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+#searchBar::placeholder {
+    color: #DCE775;
 }
 
 #searchBar {
@@ -58,15 +82,25 @@ body {
     border: 2px solid rgb(167, 201, 112);
     font-size: 1.2rem;
     font-family: inherit;
+    background-color: inherit;
+    border: 2px solid #DCE775;
+    color: #DCE775;
 }
 
 .btn {
     font-size: 1rem;
     padding: 3px 1rem;
     border-radius: 0.5rem;
-    border: 2px solid rgb(167, 201, 112);
+    border: 2px solid #DCE775;
     font-family: inherit;
-    color: gray;
+    font-size: 1rem;
+    color: inherit;
+    background-color: inherit;
+}
+
+.btn:hover {
+    background-color:azure;
+    color:dodgerblue;
 }
 /* HEADER STYLING ENDS */
 
@@ -74,26 +108,44 @@ body {
 
 .container {
     text-align: center;
-    border: 3px solid rgb(45, 0, 128);
+    border: 3px solid #9CCC65;
     border-radius: 1rem;
     margin: 4rem;
     padding-bottom: 1rem;
 }
 
 .container form {
-    width: 20rem;
+    width: 25rem;
     margin: auto;
 }
 .form-group input{
+    font-family: inherit;
     box-sizing: border-box;
     font-size: 1.5rem;
     width: 100%;
     display: block;
     margin-bottom: 1rem;
     border-radius: 0.5rem;
-    border: 2px solid rgb(235, 180, 141);
+    border: 2px solid #DCE775;
+    padding: 0.5rem;
 }
 
+.submit {
+    padding: 0.5rem 2.5rem;
+    border-radius: 0.8rem;
+    font-weight: 700;
+    color:#DCE775;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: inherit;
+    border: 2px solid #DCE775;
+}
+
+.submit:hover {
+    background-color:azure;
+    color:dodgerblue;
+    font-size: 1.2rem;
+}
 /* CONTAINER STYLING ENDS */
  
 footer {
@@ -102,5 +154,58 @@ footer {
 
 footer a {
     text-decoration: none;
-    color: #43A047;
+    color: #81D4FA;
 }
+
+footer > h2 {
+    margin: 0;
+    padding: 2rem 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+    /* HEADER STYLING STARTS */
+    #navbar {
+        flex-wrap: wrap;
+    }
+
+    #navbar a {
+        font-size: 1rem;
+    }
+
+    #search {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #searchBar {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+    }
+
+    /* HEADER STYLING ENDS */
+
+    /* CONTAINER STYLING STARTS */
+    .container {
+        margin: 2rem;
+    }
+
+    .container > form {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .form-group > input {
+        font-size: 1rem;
+    }
+    /* CONTAINER STYLING ENDS */
+
+    /* FOOTER STYLING STARTS */
+    footer h2 {
+        font-size: 1.2rem;
+        padding: 2rem 0.5rem;
+    }
+  }
